@@ -7,7 +7,7 @@ module.exports = {
   },
 
   async update(req, res) {
-    
+
     const data = req.body
    
     const weeksPerYear = 52
@@ -23,7 +23,7 @@ module.exports = {
     await Profile.update({
       ... await Profile.get(),
       ...req.body,
-      "value-hour": valueHour
+      "value-hour": valueHour,
     })
     return res.redirect('/profile')
   }

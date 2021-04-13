@@ -8,6 +8,7 @@ module.exports = {
     return res.render("job")
   },
   async save(req, res) {
+
     await Job.create(
       {
         name: req.body.name,

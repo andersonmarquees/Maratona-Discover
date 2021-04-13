@@ -26,7 +26,8 @@
   <body id="page-profile">
     
     <%- include('parts/page-header', { title: 'Meu Perfil'}) %>
-    
+
+        
     <div class="container animate-up delay-2">
       <aside class="card">
         <img src="<%= profile.avatar %>" alt="<%= profile.name %>">
@@ -41,7 +42,7 @@
 
         <form id="form-profile" method="post" action="/profile">
           <fieldset>
-            <legend>Dados do perfil</legend>
+            <legend>Dados do perfil</legend>            
             <div class="separator light"></div>
 
             <div class="input-group">

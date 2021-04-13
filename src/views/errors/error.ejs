@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles/main.css" />
+  <link rel="stylesheet" href="../../../styles/pages/error.css">
+  <title>Not Found</title>
+</head>
+<body>
+
+  <% if( typeof error !== 'undefined') { %>
+   
+    <div class="modal">
+      <img src="/images/err.svg" />
+      <p class="container">
+        <% error.forEach(error => { %>
+          <%= error.msg %>
+          <br>
+        <% }) %>
+      </p>
+      <footer>
+        <% if(link === 'profile') { %>
+          <a class="button" href="/profile">Voltar ao Profile</a>
+        <% } else { %>
+          <a class="button" href="/job/<%= id %>">Voltar ao Job</a>
+        <% } %>
+      </footer>
+    </div>
+
+  <% } %>
+  
+</body>
+</html>
+
